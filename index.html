@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="en">
 <!--  -->
 <head>
@@ -310,7 +310,7 @@
 									<ul class="list-inline mb-4" id="portfolio-flters">
 											<li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">All</li>
 									</ul>
-									<a class="github" href="https://github.com/tiagogb21">Visite meu Github</a>
+									<a class="github" href="https://github.com/tiagogb21" target="_blank">Visite meu Github</a>
 							</div>
 					</div>
 					<div class="row portfolio-container">
@@ -413,6 +413,7 @@
 	<!-- Testimonial End -->
 
 	<!-- Contact Start -->
+
 	<div class="container-fluid py-5" id="contact">
 			<div class="container">
 					<div class="position-relative d-flex align-items-center justify-content-center">
@@ -423,32 +424,47 @@
 							<div class="col-lg-8">
 									<div class="contact-form text-center">
 											<div id="success"></div>
-											<form name="sentMessage" id="contactForm" novalidate="novalidate">
+											<form
+												action="envia_fale.php"
+												method="post"
+												name="sentMessage"
+												id="contactForm"
+											>
 													<div class="form-row">
 															<div class="control-group col-sm-6">
-																	<input type="text" class="form-control p-4" id="name" placeholder="Seu Nome"
+																	<input
+																		name="nome"
+																		type="text" class="form-control p-4" id="name" placeholder="Seu Nome"
 																			required="required" data-validation-required-message="Por favor, ensira seu nome" />
 																	<p class="help-block text-danger"></p>
 															</div>
 															<div class="control-group col-sm-6">
-																	<input type="email" class="form-control p-4" id="email" placeholder="Seu Email"
+																	<input
+																	name="email"
+																	type="email" class="form-control p-4" id="email" placeholder="Seu Email"
 																			required="required" data-validation-required-message="Por favor, ensira seu email" />
 																	<p class="help-block text-danger"></p>
 															</div>
 													</div>
 													<div class="control-group">
-															<input type="text" class="form-control p-4" id="subject" placeholder="Assunto"
+															<input
+															name="assunto"
+															type="text" class="form-control p-4" id="subject" placeholder="Assunto"
 																	required="required" data-validation-required-message="Por favor, insira um assunto" />
 															<p class="help-block text-danger"></p>
 													</div>
 													<div class="control-group">
-															<textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Mensagem"
+															<textarea
+																name="mensagem"
+																class="form-control py-3 px-4" rows="5" id="message" placeholder="Mensagem"
 																	required="required"
 																	data-validation-required-message="Por favor, ensira uma mensagem"></textarea>
 															<p class="help-block text-danger"></p>
 													</div>
 													<div>
-															<button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Enviar Mensagem</button>
+															<button
+															name="submit"
+															class="btn btn-outline-primary" type="submit" id="sendMessageButton">Enviar Mensagem</button>
 													</div>
 											</form>
 									</div>
@@ -486,7 +502,6 @@
 
 	<!-- Back to Top -->
 	<a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
 
 	<!-- JavaScript Libraries -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
